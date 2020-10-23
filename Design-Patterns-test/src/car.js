@@ -41,7 +41,7 @@ trip1.start();
 trip1.end();
 
 
-const car2 = new Kuaiche('鄂ACCCCC', '劳斯莱斯');
+const car2 = new Zhuanche('鄂ACCCCC', '劳斯莱斯');
 
 const trip2 = new Trip(car2);
 
