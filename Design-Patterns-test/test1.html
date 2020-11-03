@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>代理模式示例</title>
+  <style>
+    #box2,
+    #box3 {
+      width: 30vw;
+      line-height: 30vh;
+      text-align: center;
+      height: 30vh;
+      background-color: blue;
+      margin-top: 10vh;
+      font-size: 20px;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="box1">
+    <a href="#">a1</a>
+    <a href="#">a2</a>
+    <a href="#">a3</a>
+    <a href="#">a4</a>
+    <a href="#">a5</a>
+  </div>
+
+  <div id="box2">box2</div>
+  <div id="box3">box3</div>
+
+
+  <script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"></script>
+
+  <script>
+    var box = document.querySelector('#box1');
+    box.addEventListener('click', function (e) {
+      var target = e.target;
+      if (target.nodeName === 'A') {
+        alert('点击的是A标签是' + target.innerHTML)
+      }
+    })
+
+    $('#box2').click(function () {
+      $(this).css('background-color', '#f50');
+    })
+
+    $('#box3').click(function () {
+      setTimeout(
+        $.proxy(function () {
+          $(this).css('background-color', '#f50');
+        }, this),
+      1000)
+    })
+
+
+  </script>
+</body>
+
+</html>

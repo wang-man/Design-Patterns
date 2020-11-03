@@ -23,6 +23,7 @@
     "webpackbar": "^4.0.0"
   },
   "dependencies": {
+    "core-decorators": "^0.20.0",
     "http-server": "^0.12.3"
   }
 }
