@@ -1,0 +1,14 @@
+[
+  {
+    "name": "JavaScript高级程序设计",
+    "price": 98
+  },
+  {
+    "name": "JavaScript语言精粹",
+    "price": 38
+  },
+  {
+    "name": "你不知道的JavaScript",
+    "price": 58
+  }
+]
