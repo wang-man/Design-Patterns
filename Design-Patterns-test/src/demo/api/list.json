@@ -1,13 +1,18 @@
 [
   {
+    "id": 1,
     "name": "JavaScript高级程序设计",
-    "price": 98
+    "price": 98,
+    "discount": 9
   },
-  {
+  { 
+    "id": 2,
     "name": "JavaScript语言精粹",
-    "price": 38
+    "price": 38,
+    "discount": 9
   },
   {
+    "id": 3,
     "name": "你不知道的JavaScript",
     "price": 58
   }
