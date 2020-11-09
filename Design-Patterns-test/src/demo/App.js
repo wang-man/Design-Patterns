@@ -1,6 +1,7 @@
 import $ from 'jquery'
 import ShoppCart from './shoppingCart/shoppingCart'
 import List from './list/list'
+// import './style/common.css'
 
 export default class App {
   constructor(id){
@@ -9,7 +10,6 @@ export default class App {
 
   // 在这个init方法中初始化购物车和列表两个对象实例
   init(){
-    console.log(this.$el)
     this.initShoppingCart()
     this.initList()
   }

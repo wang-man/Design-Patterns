@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackBar = require('webpackbar')
 
 module.exports = {
   entry: './src/index.js',
@@ -21,7 +22,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './index.html'
-    })
+    }),
+    new WebpackBar()
   ],
   // Determine how modules within the project are treated
   module: {

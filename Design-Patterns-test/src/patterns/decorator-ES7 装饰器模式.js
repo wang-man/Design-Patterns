@@ -21,6 +21,8 @@ console.log(Demo.isDec)
 
 function mixins(list) {
   return function (target) {    // 所有的装饰器都应该是一个函数，因为@mixins(Foo)执行了，所以需要在返回一个函数
+
+    // 这一句的意思是，给目标类的原型添加list代表的属性或方法，因此target就被装饰了新的特性
     Object.assign(target.prototype, list)
   }
 }
@@ -31,10 +33,12 @@ const Foo = {
   }
 }
 
+// 1.装饰Myclass
 @mixins(Foo)
 class Myclass {
 
 }
 
+// 2.Myclass的实例就有了foo方法
 const obj = new Myclass();
 obj.foo()

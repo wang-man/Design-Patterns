@@ -17,7 +17,6 @@ export default class List {
   }
 
   render() {
-    console.log(this.app)
     this.app.$el.append(this.$el)
   }
 
