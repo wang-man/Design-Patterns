@@ -51,7 +51,7 @@ export default class Item {
     
     $btn.on('click', function () {
       // 添加、删除
-      console.log(fsm)
+      // console.log(fsm)
       // 注意fsm.js是拿到的在每次状态变化之前的值，而不是之后。因此不要弄反addToCart()与deleteFromCart()
       if (fsm.is('加入购物车')) {
         fsm.addToCart()      // 注意调用methods时不用加on
@@ -63,13 +63,14 @@ export default class Item {
   }
 
   // 添加到购物车
-  // @log('add')
+  // 日志log为什么要以装饰器的方式使用。因为添加购物车及从购物车删除商品这两个操作属于前台的业务，而日志属于后台功能，写法上不应该混在同一个方法里，这样业务就区分不够清晰，界限不够分明。因此将log功能单独定义，以装饰addToCartHandle函数的方式使用。
+  @log('add')                 // log装饰器
   addToCartHandle() {
     this.cart.add(this.data)
   }
 
   // 从购物车删除
-  // @log('del')
+  @log('del')
   deleteFromCartHandle() {
     this.cart.del(this.data.id)
   }
